@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INNOVATEX - OSEI-BONSU CEPHAS Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f7f9; /* Light background */
+}
+
+.background-img {
+    width: 100%;
+    height: 400px; /* Increased height */
+    object-fit: cover;
+    filter: brightness(75%); /* Slightly darkened to make text pop */
+}
+
+.profile-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff; /* White background for contrast */
+    margin-top: -150px;
+    z-index: 1;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #007bff; /* Blue border around profile picture */
+    margin-top: -75px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #004080; /* Dark blue for heading */
+}
+
+h2 {
+    margin: 10px 0;
+    font-size: 1.8em;
+    color: #007bff; /* Primary blue for subheadings */
+}
+
+p {
+    margin: 10px 0;
+    line-height: 1.6;
+    color: #555; /* Gray for body text */
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.about-me, .interests, .skills, .projects {
+    padding: 20px;
+    background-color: #f8f9fa;
+    margin: 20px 0;
+    border-radius: 10px;
+    border-left: 5px solid #007bff; /* Blue accent on the left */
+}
+
+.interests ul, .skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.interests li, .skills li {
+    background-color: #e9ecef;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    color: #004080; /* Dark blue text */
+    font-weight: bold;
+}
+
+/* Projects Section */
+#projects {
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+#projects h2 {
+    text-align: center;
+    color: #333; /* Standard gray */
+    margin-bottom: 20px; /* Space between heading and projects */
+}
+
+/* Project section grid layout */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.project {
+    flex: 1 1 calc(33.333% - 20px); /* Three projects per row */
+    box-sizing: border-box;
+    background-color: #fff; /* Add a background color */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-img {
+    width: 100%;
+    height: 180px; /* Adjusted height for consistency */
+    object-fit: cover; /* Ensures images cover the container */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.project h3 {
+    margin: 15px 0 10px;
+    font-size: 1.5em;
+    color: #007aec; /* Standard gray */
+    text-align: center;
+}
+
+.project p {
+    margin: 10px 0;
+    line-height: 1.4;
+    color: #555;
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* Responsive layout for smaller screens */
+@media screen and (max-width: 768px) {
+    .project {
+        flex: 1 1 100%; /* Stack projects on smaller screens */
+    }
+}
+/* Video Demonstration Section */
+#video-demonstration {
+    padding: 50px;
+    background-color: #f4f7f9; /* Light background */
+}
+
+#video-demonstration h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #004080; /* Dark blue for heading */
+}
+
+#video-demonstration .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+#video-demonstration .project {
+    background-color: #ffffff; /* White background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    flex-basis: calc(50% - 20px); /* Two videos per row */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#video-demonstration h3 {
+    margin: 15px 0 10px;
+    font-size: 1.5em;
+    color: #007bff; /* Blue for subheadings */
+    text-align: center;
+}
+
+#video-demonstration .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    background: #000;
+}
+
+#video-demonstration .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    #video-demonstration .project {
+        flex-basis: 100%; /* Stack videos on smaller screens */
+    }
+}
+/* General Section Styling */
+#certifications {
+    padding: 40px;
+    background-color: #f8f9fa;
+    margin: 20px 0;
+    border-radius: 10px;
+    border-left: 5px solid #007bff; /* Blue accent on the left */
+}
+
+#certifications h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Styling for certification categories */
+.certification-category {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-left: 5px solid #007bff; /* Blue accent on the left */
+    border-radius: 10px;
+}
+
+/* Styling for individual certificates */
+.certificate {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #e9ecef;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.certificate img {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+/* Certificate info styling */
+.certificate-info {
+    text-align: left;
+}
+
+.certificate-info h4 {
+    font-size: 1.25em;
+    margin-bottom: 10px;
+    color: #004080; /* Dark blue text */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.certificate-info h4 i {
+    color: #FFD700;
+    margin-right: 10px;
+}
+
+.certificate-info p {
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .certificate {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .certificate img {
+        margin-bottom: 15px;
+    }
+}
+/* Achievements Section Styling */
+#achievements {
+    padding: 40px;
+    background-color: #f8f9fa;
+    margin: 20px 0;
+    border-radius: 10px;
+    border-left: 5px solid #007bff; /* Blue accent on the left */
+}
+
+#achievements h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.achievements-container {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.achievements-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.achievements-list li {
+    background-color: #e9ecef;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    color: #004080; /* Dark blue text */
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #achievements {
+        padding: 20px;
+    }
+
+    .achievements-list li {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+}
+/* Research Paper Section */
+#research-paper {
+    background-color: #f9f9f9;
+    padding: 30px 20px; /* Increased padding for more space */
+    margin: 20px 10px; /* Reduced side margins for a bit more width */
+    border-radius: 10px;
+    border-left: 5px solid #007bff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.research-container {
+    max-width: 100%; /* Full width with container centering */
+    margin: 0 auto; /* Center the container */
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+/* Headings */
+h2 {
+    text-align: center;
+    font-size: 2.7rem; /* Slightly increased size */
+    color: #333;
+    margin-bottom: 25px; /* More space below heading */
+}
+
+h3 {
+    font-size: 1.6rem; /* Slightly increased size */
+    color: #444;
+    margin-top: 25px; /* More space above heading */
+    margin-bottom: 15px; /* More space below heading */
+}
+
+p {
+    font-size: 1.05rem; /* Slightly increased font size */
+    color: #666;
+    line-height: 1.7; /* Increased line height for better readability */
+}
+
+/* Research Paper Link */
+.research-link {
+    display: block;
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 14px 22px; /* Increased padding */
+    margin: 25px auto; /* Adjusted margin for more spacing */
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.research-link:hover {
+    background-color: #0056b3;
+}
+
+/* Diagrams - Adjusted Sizes */
+.diagram {
+    display: block;
+    width: 100%;
+    max-width: 650px; /* Slightly increased max-width */
+    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .diagram {
+        max-width: 550px; /* Adjusted size for tablet screens */
+    }
+}
+
+@media (max-width: 767px) {
+    .diagram {
+        max-width: 400px; /* Adjusted size for mobile screens */
+    }
+
+    h2 {
+        font-size: 2.2rem; /* Adjusted heading size on mobile */
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+/* Future Work and References Sections */
+.future-work {
+    margin-top: 35px; /* Increased margin-top */
+    padding-top: 25px; /* Increased padding-top */
+    border-top: 1px solid #ddd;
+}
+
+.references ul {
+    list-style-type: disc;
+    padding: 0 20px;
+}
+
+.references ul li {
+    font-size: 1rem; /* Adjusted font size */
+    color: #444;
+    margin-bottom: 12px; /* Increased spacing between list items */
+}
+
+.references ul i {
+    font-style: italic;
+}
+
+#contact {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#contact {
+    padding: 20px;
+    background-color: #f8f9fa;
+    margin: 20px 0;
+    border-radius: 10px;
+    border-left: 5px solid #007bff; /* Blue accent on the left */
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    display: block;
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+/* Footer Section */
+.footer-container {
+    text-align: center;
+    width: 100%; /* Extend full width */
+    padding: 10px 0;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.social-link {
+    display: inline-block;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+footer p {
+    font-size: 0.9em;
+    color: #050505;
+}
+
+/* Responsive layout for footer */
+@media screen and (max-width: 768px) {
+    .social-media {
+        flex-direction: row; /* Keep icons in a single row */
+        flex-wrap: wrap; /* Allow wrapping if needed */
+        gap: 10px;
+    }
+
+    .social-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .footer-container {
+        padding: 5px 10px; /* Reduce padding on mobile */
+    }
+}
+.future-plans {
+    padding: 20px;
+    background-color: #f8f9fa;
+    margin: 20px 0;
+    border-radius: 10px;
+    border-left: 5px solid #007bff; /* Blue accent on the left */
+}
+
+.future-plans h2 {
+    color: #004080; /* Dark blue */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.plan-section {
+    background-color: #e9ecef;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+.plan-section h3 {
+    color: #004080; /* Dark blue */
+    font-weight: bold;
+}
+
+.plan-section p {
+    font-size: 16px;
+    color: #333; /* Darker gray for readability */
+}
+/* Projects Section */
+#projects {
+    padding: 40px;
+    background-color: #f9f9f9;
+    margin: 20px 0;
+    border-radius: 10px;
+    border-left: 5px solid #007bff; /* Blue accent on the left */
+}
+
+#projects h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Styling for individual projects */
+.project-item {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #e9ecef;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Button styling */
+.project-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.project-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #projects {
+        padding: 20px;
+    }
+
+    .project-button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+}
+
+/* Navigation Bar Styling */
+.navbar {
+    background-color: #007bff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f8f9fa;
+}
+
+/* Mobile Responsiveness */
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #007bff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+
+</style>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">INNOVATEX</a>
+            <button class="menu-toggle" aria-label="Toggle Navigation">
+                &#9776; <!-- Hamburger Icon -->
+            </button>
+            <ul class="nav-links">
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#interests">Interests</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#future-plans">Vision</a></li>
+                <li><a href="#certifications">Cert</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#video-demonstration">Video Demo</a></li>
+                <li><a href="#code">Codes</a></li>
+                <li><a href="#research-paper">Research</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Background Image -->
+    <div class="background-img">
+        <img src="https://sweagro.com/wp-content/uploads/2024/06/AdobeStock_728648201-scaled.jpg" alt="Background Image" class="background-img">
+    </div>
+
+    <!-- Profile Section -->
+    <div class="profile-container">
+        <img src="https://imgur.com/TAN04fH.png" alt="Profile Picture" class="profile-pic">
+        <h1>Osei-Bonsu Cephas</h1>
+        <h2>Major & Minor:Engineering & Env. Science</h2>
+        <p>I am drawn to studying engineering with a commitment to addressing environmental sustainability and societal challenges. My goal is to integrate technological innovation with interdisciplinary approaches to create meaningful change. For instance, I am passionate about designing sensors to monitor climate change and air quality, as well as developing autonomous systems for environmental monitoring and sustainable resource management.
+
+           I believe that combining a deep understanding of engineering principles with insights from environmental studies, policy, and ethics can create holistic solutions to global challenges. By blending technical expertise with a broader understanding of human and ecological systems, I hope to contribute to a future where engineering and sustainability intersect to improve quality of life for generations to come.</p>
+        <p><strong>Contact:</strong> cephasoseib001@gmail.com</p>
+    </div>
+
+    <!-- About Me Section -->
+    <div id="about-me" class="about-me">
+        <h2>About Me</h2>
+        <p>I’m Osei-Bonsu Cephas, a proud General Science graduate from Konongo Odumase Senior High School. Curiosity has always been my compass, guiding me to explore the unknown and challenge myself to uncover the ‘why’ behind everything I encounter. With an unquenchable thirst for knowledge, I see every day as an opportunity to learn and grow. As a passionate engineering and environmental enthusiast, I’m driven by a bigger purpose: to harness the power of technology in ways that protect our planet and ensure a sustainable future for generations to come</p>
+    </div>
+   
+    <!-- About Me Section -->
+    <div class="about-me">
+        <h2>My purpose, my journey</h2>
+        <p>Life is not just about carving out your own journey, but about helping others discover the beauty and hope in theirs. From a young age, I have been driven by a deep calling to serve those who face overwhelming obstacles, to lift up those who feel left behind. It’s not enough for me to simply witness the world’s injustices; I am determined to confront them, to offer a hand to those who need it most, and to help people realize their own strength in the face of adversity.
+
+            Whether I’m designing systems that bring real change, organizing fundraisers, or providing essential resources to those who are often overlooked, my purpose is always the same: to make life better for others. I believe that even the smallest acts of kindness and innovation can spark hope, and that hope can transform lives.
+            
+            I have always put the needs of others above my own, not because it’s easy, but because I know that by doing so, I’m contributing to something bigger than myself. With every project I take on, with every effort I make, I hold onto the belief that a better world is possible, if we each take responsibility to shape it.
+            
+            My dream is to continue helping, learning, adapting, and creating solutions that not only push the boundaries of technology but also touch hearts. I want to inspire others to see the hope that exists even in the darkest moments and to use my knowledge and passion to drive real, lasting change. I don’t just dream of a better world—I’m committed to building it.
+            
+            </p>
+    </div>
+
+
+
+
+
+   <!-- Interests Section -->
+<div id="interests" class="interests">
+    <h2>Interests</h2>
+    <ul>
+        <li>STEM Education</li>
+        <li>Climate Change Mitigation</li>
+        <li>Ethics in Technology</li>
+        <li>Science Communication and Public Outreach</li>
+        <li>Robotics and Autonomous Systems</li>
+        <li>Machine Learning for Environmental Applications</li>
+        <li>Interdisciplinary Research</li>
+        <li>Green and Sustainable Technology</li>
+        <li>Internet of Things (IoT) for Smart Systems</li>
+        <li>Artificial Intelligence and Environmental Impact</li>
+        <li>Environmental Policy and Advocacy</li>
+        <li>Sustainable Development Goals (SDGs)</li>
+        <li>Environmental Justice and Equity</li>
+        <li>Philosophy of Science and Technology</li>
+        <li>Creative Problem-Solving through Design Thinking</li>
+    </ul>
+</div>
+
+
+   <!-- Skills Section -->
+<div class="skills">
+    <h2>Skills</h2>
+    <ul>
+        <!-- Technical and Interdisciplinary Skills -->
+        <li>Organization and Project Management</li>
+        <li>Interdisciplinary Research and Analysis</li>
+        <li>Persuasive Public Speaking and Advocacy</li>
+        <li>Computational Thinking and Problem-Solving</li>
+        <li>Arduino and Microcontroller Programming</li>
+        <li>Python for Data Analysis and Machine Learning</li>
+        <li>C++ for Embedded Systems</li>
+        <li>Leadership and Creative Collaboration</li>
+        <li>Web Development (HTML, CSS, JavaScript)</li>
+        <li>Environmental Sustainability Practices</li>
+        <li>Community Engagement and Youth Empowerment</li>
+        <li>Policy Analysis for Sustainable Development</li>
+        <li>Design Thinking for Innovative Solutions</li>
+        <li>Sustainable Agriculture Techniques</li>
+        <li>STEM Education and Outreach</li>
+    </ul>
+
+    <!-- Sports and Physical Skills -->
+    <h3>Sports and Physical Skills</h3>
+    <ul>
+        <li>Cross Country Running</li>
+        <li>Volleyball</li>
+    </ul>
+</div>
+
+
+        </ul>
+    </div>
+    <section id="achievements">
+        <div class="achievements-container">
+            <h2>Achievements and Accolades</h2>
+            <ul class="achievements-list">
+                <li>Regional Trailblazer in STEM Innovation and Entrepreneurship</li>
+                <li>NASA SPACE APP AWARD</li>
+                <li>AMERICAN MATHS OLYMPIAD</li>
+                <li>PARAGON OF SCHOLARSHIP AWARD</li>
+                <li>SRC UNITY IN ACTION AWARD</li>
+                <li>Intellecta Honors Championship</li>
+                <li>Raised awareness about water conservation and provided access to clean water for underprivileged communities, benefiting various communities through outreach programs, filtration system installations, and water donation drives</li>
+            </ul>
+        </div>
+        <div id="future-plans" class="future-plans">
+            <h2>Future Plans and Ambition</h2>
+            
+            <div class="plan-section">
+                <h3>1. Mitigating Weather Conditions and Air Quality</h3>
+                <p>I aim to design systems that combine advanced engineering with environmental science to mitigate changes in weather conditions and monitor air quality. By leveraging interdisciplinary insights, I want to create solutions that not only protect the planet but also address the ethical and societal impacts of climate change, ensuring a sustainable future for all generations.</p>
+            </div>
+        
+            <div class="plan-section">
+                <h3>2. Storm-Driven Energy Capture Systems</h3>
+                <p>My goal is to develop storm-resilient energy systems, such as specialized wind turbines, to harness energy from extreme weather events. These innovations will blend engineering ingenuity with sustainability principles, ensuring they are both durable and ecologically responsible. I envision collaborating across disciplines to address energy needs in ways that respect the environment and support vulnerable communities.</p>
+            </div>
+        
+            <div class="plan-section">
+                <h3>3. Improving Telemedicine and Renewable Energy</h3>
+                <p>By integrating renewable energy systems with telemedicine infrastructure, I aim to ensure hospitals have sustainable power supplies. This effort involves not just engineering solutions but also understanding the intersection of healthcare, ethics, and environmental sustainability, providing equitable access to life-saving technologies even in remote regions.</p>
+            </div>
+        
+            <div class="plan-section">
+                <h3>4. Disaster Preparedness and Recovery</h3>
+                <p>I aspire to design disaster-resilient energy systems that combine solar and wind technology with off-grid capabilities. These systems will not only ensure power during natural disasters but also demonstrate how engineering, policy-making, and environmental ethics can converge to build a more resilient world.</p>
+            </div>
+        
+            <div class="plan-section">
+                <h3>5. Food Security and Automation in Agriculture</h3>
+                <p>Precision agriculture systems that utilize robotics, IoT sensors, and data analytics are essential to optimizing farming practices. By addressing environmental and ethical concerns, I want to design systems that reduce resource consumption, enhance yields, and promote sustainable agricultural practices, contributing to global food security.</p>
+            </div>
+        
+            <div class="plan-section">
+                <h3>6. Sustainable Transportation</h3>
+                <p>My vision is to develop energy-efficient electric vehicles and their supporting infrastructure. By combining technical innovation with an understanding of societal needs, I hope to advance sustainable transportation solutions that reduce carbon footprints while considering accessibility and equity.</p>
+            </div>
+        
+            <div class="plan-section">
+                <h3>7. Biodiversity Loss and Habitat Destruction</h3>
+                <p>Through the development of conservation drones equipped with sensors for wildlife monitoring and habitat protection, I aim to combat biodiversity loss. This work integrates engineering with environmental ethics, allowing for more effective conservation efforts and a deeper understanding of how technology can support ecological balance.</p>
+            </div>
+        </div>
+        
+        
+    </section>
+    
+    <section id="certifications">
+        <h2>Certifications and Achievements</h2>
+        
+        <div class="certification-category">
+            <h3>Academic Achievements</h3>
+            <div class="certificate">
+                <img src="https://i.imgur.com/thcFp5t.jpeg" alt="Best Physics Student Certificate">
+                <div class="certificate-info">
+                    <h4><i class="fas fa-trophy"></i> Best Physics Student</h4>
+                    <p>Awarded for outstanding academic performance in physics.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="certification-category">
+            <h3>Participation and Honors</h3>
+            <div class="certificate">
+                <img src="https://i.imgur.com/qAHQ8NS.png" alt="NASA SPACE APP AWARD">
+                <div class="certificate-info">
+                    <h4><i class="fas fa-medal"></i> NASA SPACE APP AWARD</h4>
+                    <p>In recognition of providing innovative and impactful solutions using NASA's open data to address real-world challenges in space exploration, Earth science, and technology,
+                         while promoting collaboration and scalable ideas that can benefit humanity</p>
+                </div>
+            </div>
+        </div>
+        <div class="certification-category">
+            <h3>Participation and Honors</h3>
+            <div class="certificate">
+                <img src="https://i.imgur.com/v0i2TkN.png" alt="SRC IN UNITY AWARD">
+                <div class="certificate-info">
+                    <h4><i class="fas fa-medal"></i> SRC IN UNITY AWARD</h4>
+                    <p>Awarded as an outstanding contribution to the SRC community</p>
+                </div>
+            </div>
+            <div class="certification-category">
+                <h3>Course completion and problem solving</h3>
+                <div class="certificate">
+                    <img src="https://i.imgur.com/nY3UxIU.jpeg" alt="DEVELOPMENT AND ADVANCED ENGINEERING">
+                    <div class="certificate-info">
+                        <h4><i class="fas fa-medal"></i>DEVELOPMENT AND ADVANCED ENGINEERING</h4>
+                        <p>Awarded for completing and soving a challenge in Object-Oriented Programming (OOP), Code Refactoring, Continuous Integration (CI), and
+                            Agile Planning, in Development & Advanced Engineering Job Simulation </p>
+                    </div>
+                </div>
+    </section>
+    
+    <!-- Projects Section -->
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+        <div class="project">
+            <img src="https://i.imgur.com/V3t5BMn.jpg" alt="ALGFRED" class="project-img">
+            <h3>ALGFRED</h3>
+            <p>I created an ALGFRED (Automatic Length Gauging Flexible Rod Equipment Device) for my junior high school to overcome difficulties in measuring object heights. This innovative device simplifies the process, making it easier for students to accurately measure and record heights, enhancing their learning experience.</p>
+        </div>
+
+        <div class="project">
+            <img src="https://imgur.com/2oN9JVh.jpg" alt="Smoke Detector" class="project-img">
+            <h3>Smoke Detector</h3>
+            <p>I developed a project to combat frequent fire outbreaks in my community. This device ensures community safety through seamless communication using Arduino, smoke sensor, GSM, and LCD. It delivers prompt SMS notifications when detecting smoke, saving lives and preventing property damage with proven favorable consequences.</p>
+        </div>
+
+        <div class="project">
+            <img src="https://imgur.com/OobbkJ2.jpg" alt="Automatic Water Dispenser" class="project-img">
+            <h3>Automatic Water Dispenser</h3>
+            <p>During COVID-19, I created an automated water dispenser for my school, providing a safe, touchless handwashing experience. By eliminating shared tap contact, I helped prevent virus transmission, potentially save-guarding 900+ students' lives. Observing shared tap risks, I built this vital solution to preserve our school community's health and well-being, promoting a safer environment for all, and safeguarding against future pandemics.</p>
+        </div>
+
+        <div class="project">
+            <img src="https://imgur.com/qffb4kG.jpg" alt="Smart Dustbin" class="project-img">
+            <h3>Smart Dustbin</h3>
+            <p>My friend and I created an automated dustbin for our community library to address littering and promote sustainability. Using sensors and motors, it opens its lid when approached, encouraging convenient disposal and a clean environment. The design has made it a favorite among students, improving library sanitation. Our project showcases cooperation and creativity in tackling real-world challenges, fostering community well-being and promoting a cleaner environment.</p>
+        </div>
+
+        <div class="project">
+            <img src="https://imgur.com/JPjf0dR.jpg" alt="Smart Door System" class="project-img">
+            <h3>Smart Door System</h3>
+            <p>I developed a smart door system using Arduino, servo motor, RFID reader, locker, and buzzer. The door opens automatically after successful RFID scanning. If an illegal attempt occurs, the system alerts with an audible alarm. I created this project to improve security, driven by my passion for invention and commitment to building a better world.</p>
+        </div>
+
+        <div class="project">
+            <img src="https://i.imgur.com/eqkOVzs.jpg" alt="H20HopeHorizon" class="project-img">
+            <h3>H20HopeHorizon</h3>
+            <p>As founder, I address marginalized communities' pressing issues by providing clean water access. We empower future generations, improving health, hygiene, education, and economic growth. Our vision: a world where everyone has clean water access, regardless of background.</p>
+        </div>
+    </div>
+</section>
+
+    </div>
+    <section id="video-demonstration">
+        <h2>Video Demonstration</h2>
+        <div class="projects-container">
+            <div class="project">
+                <h3>ALGFRED</h3>
+                <div class="video-container">
+                    <div style="padding:56.25% 0 0 0;position:relative;">
+                        <iframe src="https://player.vimeo.com/video/1025197556?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                        frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+                        style="position:absolute;top:0;left:0;width:100%;height:100%;" title="ALGFRED"></iframe>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="project">
+                <h3>Smoke Detector</h3>
+                <div class="video-container">
+                    <div style="padding:56.25% 0 0 0;position:relative;">
+                        <iframe src="https://player.vimeo.com/video/985361158?badge=0&autopause=0&player_id=0&app_id=58479"
+                        frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+                        style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Smoke Detector"></iframe>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="project">
+                <h3>Automatic Water Dispenser</h3>
+                <div class="video-container">
+                    <div style="padding:56.25% 0 0 0;position:relative;">
+                        <iframe src="https://player.vimeo.com/video/1009156595?badge=0&autopause=0&player_id=0&app_id=58479"
+                        frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+                        style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Smart Dustbin"></iframe>
+                    </div>
+                </div>
+            </div>
+    
+    
+            <div class="project">
+                <h3>Smart Dustbin</h3>
+                <div class="video-container">
+                    <div style="padding:56.25% 0 0 0;position:relative;">
+                        <iframe src="https://player.vimeo.com/video/994302125?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                        frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+                        style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Smart Dustbin"></iframe>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="project">
+                <h3>Smart Door System</h3>
+                <div class="video-container">
+                    <div style="padding:56.25% 0 0 0;position:relative;">
+                        <iframe src="https://player.vimeo.com/video/994304190?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                        frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+                        style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Smart Door System"></iframe>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="project">
+                <h3>H20HopeHorizon</h3>
+                <div class="video-container">
+                    <div style="padding:56.25% 0 0 0;position:relative;">
+                        <iframe src="https://player.vimeo.com/video/1024181835?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+                        frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+                        style="position:absolute;top:0;left:0;width:100%;height:100%;" title="H20HopeHorizon"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="projects">
+            <h2>My Projects</h2>
+        
+            <div id="code" class="project-item">
+                <h3>Smart Dustbin</h3>
+                <p>An innovative dustbin to help keep the library tidy.</p>
+                <a href="https://github.com/Cephas0001/CODES/blob/main/CODES%20FOR%20ALL%20MY%20PROJECTS/DUSTBIN/DUSTBIN.ino" class="project-button">View Code on GitHub</a>
+            </div>
+        
+            <div class="project-item">
+                <h3>Smart Door</h3>
+                <p>A smart door using RFID for access control.</p>
+                <a href="https://github.com/Cephas0001/CODES/blob/main/CODES%20FOR%20ALL%20MY%20PROJECTS/SMART_DOOR/SMART_DOOR.ino" class="project-button">View Code on GitHub</a>
+            </div>
+        
+            <div class="project-item">
+                <h3>Smoke Detector</h3>
+                <p>A smoke detector system designed for safety.</p>
+                <a href="https://github.com/Cephas0001/CODES/blob/main/CODES%20FOR%20ALL%20MY%20PROJECTS/SMOKE_DETECTOR/safehaven.ino" class="project-button">View Code on GitHub</a>
+            </div>
+        </div>
+        
+        <section id="research-paper">
+            <div class="research-container">
+                <h2>Smart Shoe System for Obstacle Detection and Guidance</h2>
+                
+                <div class="abstract">
+                    <h3>Abstract</h3>
+                    <p>This research explores the design and implementation of a smart shoe system to aid visually impaired individuals by detecting obstacles using microcontrollers and sensors. The system integrates ultrasonic and infrared sensors to provide real-time feedback via Bluetooth earpieces.</p>
+                </div>
+        
+                <div class="introduction">
+                    <h3>Introduction</h3>
+                    <p>For visually challenged people, safely navigating dynamic surroundings is rather difficult. Although they provide simple tactile input, traditional mobility aids like canes are not very good at identifying objects that are not exactly in front of the user or far away. This work presents a smart shoe system combining microcontroller technology, sensor integration, and wireless connection to deliver real-time input for obstacle identification and navigation, thereby addressing these constraints.</p>
+            <p>Along with ultrasonic and infrared (IR) sensors, the suggested smart shoe uses reasonably priced and easily available technologies such as Arduino and Raspberry Pi to provide a complete solution for safe navigation. This work aims to create a wearable device using Bluetooth earphones that improves mobility, lowers accidents, and offers an easy user experience by means of auditory signals.</p>
+                </div>
+        
+                <div class="literature-review">
+                    <p>Especially in the field of obstacle detection, wearable assistive devices have developed dramatically recently. Current options include smart glasses, wearable belts with sensors that offer tactile or aural input, and electronic canes. In complicated settings, these tools can lack comfort, simplicity of use, or accuracy, however.</p>
+                    <p>Research on low-cost, adaptable, and efficient prototypes for assistive devices has extensively embraced microcontrollers like Arduino and Raspberry Pi. For instance, ultrasonic sensors and vibration feedback systems have been used in designs for smart shoes with simple obstacle-detecting powers. These designs can lack directionality and the capacity to differentiate between different kinds of barriers, including fixed and moving items, or ground-level dangers like pits.</p>
+                    <p>By adding cutting-edge technologies such as multi-directional obstacle detection, real-time Bluetooth connection, and a decision-making algorithm to provide the user clear, practical auditory instructions, this study seeks to expand upon already existing concepts.</p>
+                    </div>
+        
+                <a href="https://www.researchgate.net/publication/383751191_Microcontroller_and_Sensor-Based_Smart_Shoe_Development_for_Obstacle_Detection_and_Guidance" target="_blank" class="research-link">
+                    Full Research Paper
+                </a>
+        
+                <div class="details">
+                    <h3>System Architecture</h3>
+                    <p>The system architecture combines various hardware and software components to deliver real-time obstacle detection and guidance.</p>
+                    <img src="https://i.imgur.com/Ij5gCns.png" alt="System Architecture Diagram" class="diagram">
+        
+                    <h3>Software Components</h3>
+                    <p>The software includes data filtering, obstacle detection algorithms, decision-making systems, and Bluetooth communication.</p>
+                    <img src="https://i.imgur.com/fOEEYLt.png" alt="Software Architecture Diagram" class="diagram">
+        
+                    <h3>Data Flow</h3>
+                    <p>The data flow consists of sensor input, data processing, decision-making, and audio output to guide the user.</p>
+                    <img src="https://i.imgur.com/SOhYm7R.png" alt="Data Flow Diagram" class="diagram">
+                </div>
+        
+                <div class="future-work">
+                    <h3>Future Work</h3>
+                    <p>Future enhancements include integrating advanced sensors, improving machine learning algorithms for better obstacle detection, and refining user interface feedback mechanisms to further improve user experience.</p>
+                </div>
+        
+                <div class="references">
+                    <h3>References</h3>
+                    <ul>
+                        <li>Chandekar, T., et al. (2017). Implementation of obstacle detection and navigation system for visually impaired using smart shoes. <i>International Research Journal of Engineering and Technology (IRJET)</i>, 4(4), pp. 2125-2129.</li>
+                        <li>Chandekar, Tejal, et al. "Implementation of obstacle detection and navigation system for visually impaired using smart shoes." <i>IRJET</i> 4.4 (2017): 2125-2129.</li>
+                        <li>Chandekar, T., Chouhan, R., Gaikwad, R., Gosavi, H., & Darade, S. (2017). Implementation of obstacle detection and navigation system for visually impaired using smart shoes. <i>IRJET</i>, 4(4), 2125-2129.</li>
+                        <li>Chandekar, T., Chouhan, R., Gaikwad, R., Gosavi, H. and Darade, S., 2017. Implementation of obstacle detection and navigation system for visually impaired using smart shoes. <i>IRJET</i>, 4(4), pp.2125-2129.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+     
+        
+        <section id="contact">
+            <div class="contact-container">
+                <h2>Contact Me</h2>
+                
+                <form action="mailto:cephasbonsuosei001@gmail.com" method="post" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+        
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </section>
+        
+        <script>
+            const toggleButton = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+        
+            toggleButton.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        </script>
+        
+        <footer>
+            <div class="footer-container">
+              <div class="social-media">
+                <a href="http://Wa.me/+233551560593" target="_blank" class="social-link">
+                  <img src="https://th.bing.com/th?q=Whats+App+Icon.png&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.5&pid=InlineBlock&mkt=en-WW&cc=GH&setlang=en&adlt=moderate&t=1&mw=247" alt="WhatsApp" class="social-icon">
+                </a>
+                <a href="https://www.linkedin.com/in/cephas-bonsu-911731326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="social-link">
+                  <img src="https://th.bing.com/th/id/OIP.8OUQAzOlhtNkOtZIHKd_lwHaHa?w=148&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="LinkedIn" class="social-icon">
+                </a>
+                <a href="https://www.tiktok.com/@faithfulness_0551?_t=8pWjhKf4kju&_r=1" target="_blank" class="social-link">
+                  <img src="https://th.bing.com/th/id/OIP.10UYWgiyV3HSOvt-AZLl0QHaHa?rs=1&pid=ImgDetMain" alt="TikTok" class="social-icon">
+                </a>
+              </div>
+              <p>&copy; 2024 Osei-Bonsu Cephas. All Rights Reserved.</p>
+            </div>
+          </footer>
+          
+        
+    </body>
+</html>
